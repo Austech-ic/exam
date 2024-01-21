@@ -2,7 +2,7 @@ import React from 'react'
 import Sect from '../../../public/imgs/sect.jpeg'
 import Image from 'next/image'
 
-const sectiontwo = () => {
+const Sectiontwo = () => {
     const details = [
         {
             id:1,
@@ -93,7 +93,7 @@ const sectiontwo = () => {
         <p className='text-xs md:text-sm lg:text-base xl:text-lg text-slate-500 tracking-wide'>Problems trying to resolve the conflict between </p>
       </div>
 
-      <div className='grid lg:grid-cols-5 gap-4 px-10 py-5 md:px-20 md:py-10 lg:px-20 lg:py-10 bg-yellow-600'>
+      <div className='grid lg:grid-cols-5 gap-4 px-10 pt-1 pb-5 md:px-20 md:pt-2 md:pb-16 lg:px-20 '>
         {details.map((datum) => (
           <div key={datum.id} className='flex flex-col items-center gap-1'>
             <Image src={datum.pic} alt="pic-img" />
@@ -101,7 +101,7 @@ const sectiontwo = () => {
             <p className='text-slate-500 text-xs md:text-xl  lg:text-sm'>{datum.label}</p>
             <div className='flex flex-row items-center gap-2'>
               <p className='text-slate-500 text-xs md:text-xl lg:text-sm'>{datum.price}</p>
-              <p className='text-xs md:text-xl lg:text-sm'>{datum.newPrice}</p>
+              <p className='text-xs md:text-xl lg:text-sm text-green'>{datum.newPrice}</p>
             </div>
           </div>
         ))}
@@ -110,4 +110,4 @@ const sectiontwo = () => {
   )
 }
 
-export default sectiontwo
+export default Sectiontwo
