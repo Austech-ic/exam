@@ -1,12 +1,16 @@
 import React from 'react'
 import Sect from '../../../public/imgs/sect.jpeg'
+import Stool from '../../../public/imgs/stool.jpeg'
+import Cup from '../../../public/imgs/cup.jpeg'
+import Glass from '../../../public/imgs/glass.png'
+import Lamp from '../../../public/imgs/lamp.jpeg'
 import Image from 'next/image'
 
 const Sectiontwo = () => {
     const details = [
         {
             id:1,
-            pic:Sect,
+            pic:Lamp,
             title:"Graphic Design",
             label:"English Department",
             price:"$16.48",
@@ -14,7 +18,7 @@ const Sectiontwo = () => {
         },
         {
             id:2,
-            pic:Sect,
+            pic:Cup,
             title:"Graphic Design",
             label:"English Department",
             price:"$16.48",
@@ -22,7 +26,7 @@ const Sectiontwo = () => {
         },
         {
             id:3,
-            pic:Sect,
+            pic:Stool,
             title:"Graphic Design",
             label:"English Department",
             price:"$16.48",
@@ -30,7 +34,7 @@ const Sectiontwo = () => {
         },
         {
             id:4,
-            pic:Sect,
+            pic:Cup,
             title:"Graphic Design",
             label:"English Department",
             price:"$16.48",
@@ -38,7 +42,7 @@ const Sectiontwo = () => {
         },
         {
             id:5,
-            pic:Sect,
+            pic:Lamp,
             title:"Graphic Design",
             label:"English Department",
             price:"$16.48",
@@ -46,7 +50,7 @@ const Sectiontwo = () => {
         },
         {
             id:6,
-            pic:Sect,
+            pic:Cup,
             title:"Graphic Design",
             label:"English Department",
             price:"$16.48",
@@ -54,7 +58,7 @@ const Sectiontwo = () => {
         },
         {
             id:7,
-            pic:Sect,
+            pic:Stool,
             title:"Graphic Design",
             label:"English Department",
             price:"$16.48",
@@ -62,7 +66,7 @@ const Sectiontwo = () => {
         },
         {
             id:8,
-            pic:Sect,
+            pic:Cup,
             title:"Graphic Design",
             label:"English Department",
             price:"$16.48",
@@ -70,7 +74,7 @@ const Sectiontwo = () => {
         },
         {
             id:9,
-            pic:Sect,
+            pic:Stool,
             title:"Graphic Design",
             label:"English Department",
             price:"$16.48",
@@ -78,7 +82,7 @@ const Sectiontwo = () => {
         },
         {
             id:10,
-            pic:Sect,
+            pic:Cup,
             title:"Graphic Design",
             label:"English Department",
             price:"$16.48",
@@ -96,7 +100,7 @@ const Sectiontwo = () => {
       <div className='grid lg:grid-cols-5 gap-4 px-10 pt-1 pb-5 md:px-20 md:pt-2 md:pb-16 lg:px-20 '>
         {details.map((datum) => (
           <div key={datum.id} className='flex flex-col items-center gap-1'>
-            <Image src={datum.pic} alt="pic-img" />
+            <Image src={datum.pic} className='w-[100%] h-auto' alt="pic-img" />
             <p className='text-xs md:text-xl lg:text-sm'>{datum.title}</p>
             <p className='text-slate-500 text-xs md:text-xl  lg:text-sm'>{datum.label}</p>
             <div className='flex flex-row items-center gap-2'>
