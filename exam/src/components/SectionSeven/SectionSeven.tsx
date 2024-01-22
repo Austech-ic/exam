@@ -1,16 +1,45 @@
 "use client"
 
 import React, { useState, useEffect } from 'react';
-import Sect from '../../../public/imgs/sect.jpeg'
-import Stool from '../../../public/imgs/stool.jpeg'
-import Cup from '../../../public/imgs/cup.jpeg'
-import Glass from '../../../public/imgs/glass.png'
-import Lamp from '../../../public/imgs/lamp.jpeg'
 import Image from 'next/image'
-import Link from 'next/link'
+import Two from '../../../public/imgs/newtwo.jpeg'
+import ho from '../../../public/imgs/ho.png'
+import ly from '../../../public/imgs/ly.png'
+import ta from '../../../public/imgs/ta.png'
+import str from '../../../public/imgs/str.png'
+import aws from '../../../public/imgs/aws.png'
+import smil from '../../../public/imgs/smil.png'
+import styles from './sectionseven.module.css'
 
-const Sectiontwo = () => {
-  const [products, setProducts] = useState([]);
+const SectionSeven = () => {
+    const [products, setProducts] = useState([]);
+
+    const details = [
+        {
+            id:1,
+            pic:ho,
+        },
+        {
+            id:2,
+            pic:ly,
+        },
+        {
+            id:3,
+            pic:ta,
+        },
+        {
+            id:4,
+            pic:str,
+        },
+        {
+            id:5,
+            pic:aws,
+        },
+        {
+            id:6,
+            pic:smil,
+        },
+    ]
 
   useEffect(() => {
     // Fetch data from the API
@@ -24,25 +53,12 @@ const Sectiontwo = () => {
   }, []);
 
   console.log('Products state:', products);
-  if (!products) {
-    return <div>Loading...</div>; // Add a loading state while fetching data
-  }
-
-
-
   return (
-
-    <div>
-      <div className='flex flex-col justify-center items-center gap-1 lg:gap-1 py-5'>
-        <p className='text-sm md:text-base lg:text-lg xl:text-xl text-slate-500 tracking-wide'>Featured Products</p>
-        <p className='font-bold text-lg md:text-lg lg:text-xl xl:text-2xl tracking-wide'>BESTSELLER PRODUCTS</p>
-        <p className='text-xs md:text-sm lg:text-base xl:text-lg text-slate-500 tracking-wide'>Problems trying to resolve the conflict between </p>
-      </div>
-
-      <div className='grid lg:grid-cols-5 gap-4 px-10 pt-1 pb-5 md:px-20 md:pt-2 md:pb-16 lg:px-20  '>
+    <div className={styles.main}>
+        <p>BESTSELLER PRODUCTS</p>
+        <div className='grid lg:grid-cols-4 gap-4 px-10 pt-1 pb-5 md:px-20 md:pt-2 md:pb-16 lg:px-20 '>
       {Array.isArray(products) && products.map(product => (
-          <Link key={product.id} href={`/product/${product.id}`}>
-          <div key={product.id} className='flex flex-col items-center gap-1 hover:border border-b-slate-600 drop-shadow-lg'>
+          <div key={product.id} className='flex flex-col items-center gap-1'>
             <div className='' style={{ width: '100%', height: '30vh' }}>
               <Image
                 src={product.thumbnail}
@@ -62,11 +78,22 @@ const Sectiontwo = () => {
             </div>
               </div>
           </div>
-         </Link>
         ))}
+      </div>
+      <div className='grid justify-center lg:grid-cols-6 lg:justify-center gap-2 py-10 '>
+        {
+            details.map((datum) => (
+                <div key={datum.id} style={{ width: '100%', height: '10vh' }} className='flex items-center justify-center w-[100%]' >
+                    <Image src={datum.pic} width={70}  // Set your desired width
+                height={70} // Set your desired height
+                alt='fade-img'
+                />
+                    </div>
+            ))
+        }
       </div>
     </div>
   )
 }
 
-export default Sectiontwo
+export default SectionSeven

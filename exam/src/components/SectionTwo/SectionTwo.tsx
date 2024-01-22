@@ -9,7 +9,7 @@ import Lamp from '../../../public/imgs/lamp.jpeg'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const Sectiontwo = () => {
+const SectionTwo = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -69,4 +69,4 @@ const Sectiontwo = () => {
   )
 }
 
-export default Sectiontwo
+export default SectionTwo
