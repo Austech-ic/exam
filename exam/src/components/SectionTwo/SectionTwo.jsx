@@ -1,14 +1,13 @@
-import React from 'react'
-import Sect from '../../../public/imgs/sect.jpeg'
-import Stool from '../../../public/imgs/stool.jpeg'
-import Cup from '../../../public/imgs/cup.jpeg'
-import Glass from '../../../public/imgs/glass.png'
-import Lamp from '../../../public/imgs/lamp.jpeg'
-import Image from 'next/image'
+import React from 'react';
+import Sect from '../../../public/imgs/sect.jpeg';
+import Stool from '../../../public/imgs/stool.jpeg';
+import Cup from '../../../public/imgs/cup.jpeg';
+import Glass from '../../../public/imgs/glass.png';
+import Lamp from '../../../public/imgs/lamp.jpeg';
+import Image from 'next/image';
 
-const Sectiontwo = () => {
-
-  const details = [
+const SectionTwo = () => {
+ const details = [
       {
           id:1,
           pic:Lamp,
@@ -115,6 +114,6 @@ const Sectiontwo = () => {
       </div>
     </div>
   )
-}
+};
 
-export default Sectiontwo
+export default SectionTwo;

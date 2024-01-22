@@ -1,8 +1,5 @@
 import styles from './footer.module.css'
 import Image from 'next/image'
-// import Googleplay from '../../../../../public/img/googleplay.png'
-// import Appstore from '../../../../../public/img/AppStore.png'
-// import Bar from '../../../../../public/img/bar.jpeg'
 import {AiOutlineSend,AiOutlineInstagram} from 'react-icons/ai'
 import {TiSocialFacebook} from 'react-icons/ti'
 import {CiTwitter} from 'react-icons/ci'
