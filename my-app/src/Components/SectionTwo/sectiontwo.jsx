@@ -40,7 +40,7 @@ const Sectiontwo = () => {
 
       <div className='grid lg:grid-cols-5 gap-4 px-10 pt-1 pb-5 md:px-20 md:pt-2 md:pb-16 lg:px-20  '>
       {Array.isArray(products) && products.map(product => (
-          <Link  href={`/product/${product.id}`}>
+          <Link key={product.id} href={`/product/${product.id}`}>
           <div key={product.id} className='flex flex-col items-center gap-1 hover:border border-b-slate-600 drop-shadow-lg'>
             <div className='' style={{ width: '100%', height: '30vh' }}>
               <Image
