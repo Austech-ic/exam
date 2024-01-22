@@ -6,6 +6,15 @@ import Image from 'next/image'
 const Sectionsix = () => {
   return (
    <div className={styles.main}>
+    <div className='flex items-end justify-center gap-2 md:gap-6 text-sm py-4 md:py-6'>
+        <p className='text-xs md:text-lg'>Description</p>
+        <p className='text-xs  md:text-lg'>Additional Information</p>
+      <div className='flex items-center gap-1'>
+      <p className='text-xs  md:text-lg'>Reviews</p>
+        <p className='text-green text-xs  md:text-lg'>(0)</p>
+      </div>
+    </div>
+    <div className={styles.line}></div>
      <div className='bg-white py-10 flex flex-col lg:flex-row gap-4'>
                 <div className='flex-1'>
                   <p className='font-bold text-base md:text-2xl lg:text-xl xl:text-xl py-2 md:py-4'>the quick fox jumps over </p>

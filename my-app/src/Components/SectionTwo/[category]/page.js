@@ -4,7 +4,7 @@ import Navbar from "@/Components/Navbar/navbar";
 import Footer from "@/Components/Footer/footer";
 import Indivprod from '@/Components/Indivproduct/indivprod';
 import Sectionsix from '@/Components/Sectionsix/sectionsix';
-
+import Sectionseven from '@/Components/Sectionseven/sectionseven';
 
 const Page = () => {
     
@@ -15,6 +15,7 @@ const Page = () => {
     <Navbar />
      <Indivprod />
      <Sectionsix />
+     <Sectionseven />
     <Footer />
     </div>
   )
