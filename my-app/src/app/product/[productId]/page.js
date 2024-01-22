@@ -16,8 +16,9 @@ const Product = () => {
   if (!productId) {
     // Handle loading or error state
     return null;
-  
+ 
   }
+  console.log(productId)
   return (
     
     <div>

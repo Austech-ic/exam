@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState, useEffect } from 'react';
 import styles from './indivproduct.module.css';
 import Image from 'next/image';
@@ -8,13 +10,13 @@ import { useParams } from 'next/navigation';
 
 const Indivprod = ({ id }) => {
   const [product, setProduct] = useState(null);
-
+  const {productId} = useParams();
   
 
   
   useEffect(() => {
     // Fetch data for the individual product using the provided id
-    fetch(`https://dummyjson.com/products/${id}`)
+    fetch(`https://dummyjson.com/products/${productId}`)
       .then((response) => {
         // Check if the response is successful (status code 2xx)
         if (!response.ok) {
@@ -24,9 +26,9 @@ const Indivprod = ({ id }) => {
       })
       .then((data) => setProduct(data))
       .catch((error) => console.error('Error fetching product:', error));
-  }, [id]);
+  }, [productId]);
 
-  console.log(id);
+  console.log(productId);
 
   if (!product) {
     return <div>Loading...</div>; // Add a loading state while fetching data
