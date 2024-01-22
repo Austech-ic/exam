@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 import styles from './indivproduct.module.css'
 import Image from 'next/image'
 import Cup from '../../../public/imgs/cup.jpeg'
@@ -6,12 +6,33 @@ import { FaEye, FaRegStar, FaStar } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
 import { CiHeart } from "react-icons/ci";
 
-const Indivprod = () => {
+const Indivprod = ({id}) => {
+    
+    const [product, setProduct] = useState(null);
+
+  useEffect(() => {
+    // Fetch data for the individual product using the provided id
+    fetch(`https://dummyjson.com/products/${id}`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Fetched data:', data);
+        setProduct(data.product); // Update to use data.product
+      })
+      .catch((error) => console.error('Error fetching data:', error));
+  }, [id]);
+
+  console.log('Product state:', product);
+
+  if (!product) {
+    // Handle loading or error state
+    return null;
+  }
+    
     return (
         <div className={styles.main}>
             <div className=' flex flex-col gap-y-4 lg:flex-row gap-x-5' >
                 <div className='flex-1'>
-                    <Image src={Cup} alt='pic-img' className='w-[100%] h-[50vh] md:h-[60vh] lg:h-[80vh] xl:h-[60vh]' />
+                    <Image src={product.thumbnail} alt='pic-img' className='w-[100%] h-[50vh] md:h-[60vh] lg:h-[80vh] xl:h-[60vh]' />
                 </div>
                 <div className='flex-1 flex flex-col gap-4'>
                     <p>Float</p>

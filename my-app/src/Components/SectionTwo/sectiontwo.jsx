@@ -7,6 +7,7 @@ import Cup from '../../../public/imgs/cup.jpeg'
 import Glass from '../../../public/imgs/glass.png'
 import Lamp from '../../../public/imgs/lamp.jpeg'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Sectiontwo = () => {
   const [products, setProducts] = useState([]);
@@ -34,9 +35,10 @@ const Sectiontwo = () => {
         <p className='text-xs md:text-sm lg:text-base xl:text-lg text-slate-500 tracking-wide'>Problems trying to resolve the conflict between </p>
       </div>
 
-      <div className='grid lg:grid-cols-5 gap-4 px-10 pt-1 pb-5 md:px-20 md:pt-2 md:pb-16 lg:px-20 '>
+      <div className='grid lg:grid-cols-5 gap-4 px-10 pt-1 pb-5 md:px-20 md:pt-2 md:pb-16 lg:px-20  '>
       {Array.isArray(products) && products.map(product => (
-          <div key={product.id} className='flex flex-col items-center gap-1'>
+          <Link  href={`/product/${product.id}`}>
+          <div key={product.id} className='flex flex-col items-center gap-1 hover:border border-b-slate-600 drop-shadow-lg'>
             <div className='' style={{ width: '100%', height: '30vh' }}>
               <Image
                 src={product.thumbnail}
@@ -56,6 +58,7 @@ const Sectiontwo = () => {
             </div>
               </div>
           </div>
+         </Link>
         ))}
       </div>
     </div>
