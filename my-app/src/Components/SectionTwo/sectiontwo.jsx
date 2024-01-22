@@ -24,6 +24,9 @@ const Sectiontwo = () => {
   }, []);
 
   console.log('Products state:', products);
+  if (!products) {
+    return <div>Loading...</div>; // Add a loading state while fetching data
+  }
 
 
 
