@@ -21,6 +21,7 @@ const Product = () => {
   return (
     
     <div>
+      
       <ProductPage id={productId}  />
     </div>
   )

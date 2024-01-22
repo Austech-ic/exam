@@ -14,7 +14,7 @@ const Indivprod = ({ id }) => {
   
   useEffect(() => {
     // Fetch data for the individual product using the provided id
-    fetch(`https://dummyjson.com/products/1`)
+    fetch(`https://dummyjson.com/products/${id}`)
       .then((response) => {
         // Check if the response is successful (status code 2xx)
         if (!response.ok) {
