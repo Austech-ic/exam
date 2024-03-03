@@ -7,18 +7,10 @@ import { AiFillPicture } from 'react-icons/ai';
 import { IoIosArrowForward } from 'react-icons/io';
 import Image from 'next/image';
 
-interface Detail {
-  id: number;
-  pic: StaticImageData;
-  title: string;
-  label: string;
-  date: string;
-  comment: string;
-  button: string;
-}
 
-const SectionFour: React.FC = () => {
-  const details: Detail[] = [
+
+const SectionFour = () => {
+  const details = [
     {
       id: 1,
       pic: One,

@@ -9,7 +9,7 @@ import { CiHeart } from 'react-icons/ci';
 import { FiShoppingCart } from 'react-icons/fi';
 import Link from 'next/link';
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showMenuContent, setShowMenuContent] = useState(false);
 

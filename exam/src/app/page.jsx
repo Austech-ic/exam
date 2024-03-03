@@ -11,7 +11,7 @@ import SectionFive from "@/components/SectionFive/SectionFive";
 import Image from "next/image";
 import React from "react";
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
     <main>
       <Header />

@@ -7,7 +7,7 @@ import { CiTwitter } from 'react-icons/ci';
 import { LiaLinkedinIn } from 'react-icons/lia';
 import Link from 'next/link';
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
     <div>
       <div className={styles.main}>

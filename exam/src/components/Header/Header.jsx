@@ -6,7 +6,7 @@ import { AiOutlineMail } from 'react-icons/ai';
 import { FaInstagram, FaYoutube, FaFacebookF, FaTwitter } from 'react-icons/fa';
 import Link from 'next/link';
 
-const Header: React.FC = () => {
+const Header = () => {
     return (
         <div className={styles.main}>
             <div className={styles.subcont}>

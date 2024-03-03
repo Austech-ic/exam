@@ -4,7 +4,7 @@ import All from '../../../public/imgs/all.jpeg';
 import lad from '../../../public/imgs/lad.jpeg';
 import { FaRegStar, FaStar } from 'react-icons/fa';
 
-const SectionFive: React.FC = () => {
+const SectionFive = () => {
   return (
     <div className='flex flex-col px-10 py-10 gap-y-4 md:gap-y-8 lg:flex-row items-center md:py-10 md:px-28 lg:py-10 lg:px-44'>
       <div className='flex-1 flex flex-col gap-2 md:gap-3 lg:gap-4'>
